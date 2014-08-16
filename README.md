@@ -5,21 +5,21 @@
 [Middleman](http://middlemanapp.com/) template with Haml, Compass, and
 CoffeeScript.
 
-It is shameless based on [Sauce][https://github.com/nikiliu/sauce].
+It is shameless based on [Sauce](https://github.com/nikiliu/sauce).
 
-Please download [Modernizr][http://modernizr.com] to your JS vendor dir for production, here comes only the development version.
+Please download [Modernizr](http://modernizr.com) to your JS vendor dir for production, here comes only the development version.
 
 This template includes:
 
   - Haml/Sass, Compass, CoffeeScript
   - Normalisation via `rails-assets-normalize-css`
-  - [Modernizr][http://modernizr.com]
-  - [Kube][http://imperavi.com/kube/] CSS Framework
+  - [Modernizr](http://modernizr.com)
+  - [Kube](http://imperavi.com/kube/) CSS Framework
 
 ## Installing / Updating
 
     # Clone the repo as a Middleman template
-    <!-- git clone git@github.com:nikiliu/sauce.git ~/.middleman/sauce -->
+    git clone git@github.com:LeFnord/dip.git ~/.middleman/dip
 
     # Update to latest version
     cd ~/.middleman/dip/; git pull
