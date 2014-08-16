@@ -11,7 +11,7 @@ activate :relative_assets
 set :relative_links, true
 
 # Default layout
-page "/*", layout: "base"
+page "/*", layout: "main"
 
 # Asset paths
 set :css_dir,    "assets/stylesheets"

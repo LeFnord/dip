@@ -68,10 +68,7 @@ This template includes:
     |   |       |- application.scss       # Manifest file
     |   |                                 
     |   |-- layouts/                      
-    |   |   |- _doctype.haml              # DOCTYPE markup
-    |   |   |- _meta.haml                 # Meta tags
-    |   |   |- _icons.haml                # Icon includes
-    |   |   |- application.haml           # Main layout
+    |   |   |- main.haml                  # Main layout
     |   |                                 
     |   |- favicon.ico                    # Sauce favicon
     |   |- index.haml                     # Default page
