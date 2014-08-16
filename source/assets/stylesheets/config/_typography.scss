@@ -1,0 +1,136 @@
+//------------------------------------------------------------------------------
+// _typography.scss
+//
+// Font imports and general typography config.
+//------------------------------------------------------------------------------
+
+// Imports
+//------------------------------------------------------------------------------
+@import url("http://fonts.googleapis.com/css?family=Lato:300,700");
+
+// Font face
+//------------------------------------------------------------------------------
+$sans-font-face:  Lato, "Helvetica Neue", Helvetica, Arial, sans-serif;
+$serif-font-face: "Georgia", serif;
+
+// Font size
+//------------------------------------------------------------------------------
+$base-font-size: 15px;
+
+// Line height
+//------------------------------------------------------------------------------
+$base-line-height: 1.4;
+
+// ...
+$em: $base-font-size * 1;
+
+@mixin serif {
+  font-family: $serif-font-face;
+  font-weight: normal;
+  font-style: normal;
+}
+
+@mixin serif-bold {
+  font-family: $serif-font-face;
+  font-weight: bold;
+  font-style: normal;
+}
+
+@mixin sans-serif {
+  font-family: $sans-font-face;
+  font-weight: normal;
+  font-style: normal;
+}
+
+@mixin sans-serif-italic {
+  font-family: $sans-font-face;
+  font-weight: normal;
+  font-style: italic;
+}
+
+@mixin sans-serif-bold {
+  font-family: $sans-font-face;
+  font-weight: bold;
+  font-style: normal;
+}
+
+@mixin sans-serif-bold-italic {
+  font-family: $sans-font-face;
+  font-weight: bold;
+  font-style: italic;
+}
+
+.serif {
+  @include serif;
+}
+
+.italic {
+  @include sans-serif-italic;
+}
+
+.bold {
+  @include sans-serif-bold;
+  font-size: 0.91em;
+}
+
+.bold-italic {
+  @include sans-serif-bold-italic;
+}
+
+.cap {
+  font-variant: small-caps;
+}
+
+.emph {
+  font-size: 150%;
+}
+
+/* ----------------------------------- */
+/* Headings                            */
+/* ----------------------------------- */
+h1, h2, h3, h4, h5, h6 {
+  text-align: left;
+  @include serif-bold;
+  color: $text-color;
+}
+h1 {
+  font-size: #{($base-font-size + 6) / $em}em;
+  margin: 2em 0 1em;
+}
+h2 {
+  font-size: #{($base-font-size + 5) / $em}em;
+  margin: 1.25em 0 0.75em;
+}
+h3 {
+  font-size: #{($base-font-size + 4) / $em}em;
+  margin: 1.25em 0 0.5em;
+}
+h4 {
+  font-size: #{($base-font-size + 3) / $em}em;
+  margin: 0.75em 0 0.25em;
+}
+h5 {
+  font-size: #{($base-font-size + 2) / $em}em;
+  margin: 0.75em 0 0.25em;
+}
+h6 {
+  font-size: #{($base-font-size + 1) / $em}em;
+  margin: 0.5em 0 0.25em;
+}
+
+/* ----------------------------------- */
+/* Links                               */
+/* ----------------------------------- */
+a {
+  transition: border-color 0.75s ease-in-out;
+  transition: background-color 0.5s ease-in-out;
+  border-bottom: dotted 1px;
+  color: inherit;
+  outline: 0;
+  text-decoration: none;
+  &:hover {
+    border-color: transparent;
+    background-color: $grey-color;
+  }
+}
+

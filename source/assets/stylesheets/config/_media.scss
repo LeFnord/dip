@@ -1,0 +1,26 @@
+//------------------------------------------------------------------------------
+// _media.scss
+//
+// Media query config.
+//------------------------------------------------------------------------------
+
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px){
+  body {
+    font-size: #{($base-font-size - 0.5) / $em}em;
+  }
+}
+
+/* iPads (portrait and landscape) */
+@media only screen and (min-device-width: 480px) and (max-device-width: 984px){
+  body {
+    font-size: #{($base-font-size - 0.25) / $em}em;
+  }
+
+}
+
+/* Standard desktop and laptop screens */
+@media only screen and (min-width: 984px){
+  body {
+    font-size: #{($base-font-size) / $em}em;
+  }
+}

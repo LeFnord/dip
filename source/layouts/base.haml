@@ -1,0 +1,39 @@
+!!! 5
+%head
+  %meta{charset: "utf-8"}
+  %meta{content: "IE=edge,chrome=1", "http-equiv" => "X-UA-Compatible"}
+  %meta{content: "width=device-width, initial-scale=1.0", name: "viewport"}
+
+  -#%meta{name: "robots", content: "INDEX, FOLLOW"}
+  -#%meta{name: "revisit-after", content: "7 days"}
+
+  -#%meta{name: "description",content: "foo"}
+
+  -#%meta{name: "author", content: "name"}
+  -#%meta{name: "designer", content: "name"}
+  -#%meta{name: "keywords", content: "words"}
+
+  %meta{ name: "apple-mobile-web-app-capable", content: "yes" }
+  %meta{ name: "apple-mobile-web-app-status-bar-style", content: "black" }
+  
+  %title= current_page.data.title || "wundervoll"
+
+  %link{ rel: "shortcut icon", href: "favicon.ico" }
+  %link{ rel: "apple-touch-icon", href: "touch-icon-iphone.png" }
+  %link{ rel: "apple-touch-icon", sizes: "72x72", href: "touch-icon-ipad.png" }
+  %link{ rel: "apple-touch-icon", sizes: "114x114", href: "touch-icon-iphone-retina.png" }
+  %link{ rel: "apple-touch-icon", sizes: "144x144", href: "touch-icon-ipad-retina.png" }
+  
+  = javascript_include_tag "vendor/modernizr.js"
+  
+  = stylesheet_link_tag "main", media: 'screen, projection'
+  = stylesheet_link_tag "print", media: 'print'
+  
+  
+%body.loading.unit-centered.unit-90{ class: page_classes }
+  %header#header.units-row
+  %section#content.units-row{role: "main"}= yield
+  %footer#footer.units-row
+  
+  = javascript_include_tag "http://code.jquery.com/jquery-2.1.1.min.js"
+  = javascript_include_tag :main
