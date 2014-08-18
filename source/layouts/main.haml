@@ -31,9 +31,9 @@
   
   
 %body.loading.unit-centered.unit-90{ class: page_classes }
-  %header#header.units-row
+  %header#header.units-row= partial "header"
   %section#content.units-row{role: "main"}= yield
-  %footer#footer.units-row
+  %footer#footer.units-row= partial "footer"
   
   = javascript_include_tag "http://code.jquery.com/jquery-2.1.1.min.js"
   = javascript_include_tag :main

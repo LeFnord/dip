@@ -18,6 +18,10 @@ set :css_dir,    "assets/stylesheets"
 set :js_dir,     "assets/javascripts"
 set :images_dir, "assets/images"
 
+# partials path
+set :partials_dir, "partials"
+
+# prefixing css properties
 activate :autoprefixer, browsers: ['last 2 versions']
 
 # Haml config

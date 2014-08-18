@@ -4,13 +4,13 @@
 // Example Sauce component.
 //------------------------------------------------------------------------------
 
-.sauce {
+.dip {
   text-align: center;
   font-family: "Lato", sans-serif;
   margin: 100px 0;
 
   h1 {
-    @include replace-text-with-dimensions("sauce.png");
+    @include replace-text-with-dimensions("dip.png");
     margin: 0 auto;
   }
   p {
