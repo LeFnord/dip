@@ -4,5 +4,4 @@
 # Manifest file for scripts.
 #-------------------------------------------------------------------------------
 
-#= require_tree ./vendor
 #= require_tree ./modules
