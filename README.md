@@ -7,14 +7,16 @@ CoffeeScript.
 
 It is shameless based on [Sauce](https://github.com/nikiliu/sauce).
 
-Please download [Modernizr](http://modernizr.com) to your JS vendor dir for production, here comes only the development version.
+~~Please download [Modernizr](http://modernizr.com) to your JS vendor dir for production, here comes only the development version.~~
 
 This template includes:
 
   - Haml/Sass, Compass, CoffeeScript
-  - Normalisation via `rails-assets-normalize-css`
-  - [Modernizr](http://modernizr.com)
   - [Kube](http://imperavi.com/kube/) CSS Framework
+  - [bower](http://bower.io) package manager
+  
+    - [Modernizr](http://modernizr.com)
+    - JQuery
 
 ## Installing / Updating
 
@@ -27,7 +29,7 @@ This template includes:
 
 ## Usage
 
-    # Scaffold a project using Sauce
+    # Scaffold a project using Dip
     middleman init [my_project] --template=dip
 
     # Optionally remove default README and Git repository
@@ -45,7 +47,7 @@ This template includes:
     |-- source/
     |   |-- assets
     |   |    |-- images/
-    |   |    |   |- sauce.png             # Sauce logo
+    |   |    |   |- dip.png               # Dip logo
     |   |    |
     |   |    |-- javascripts/
     |   |    |   |- modules/              # Individual JavaScript modules
@@ -68,22 +70,25 @@ This template includes:
     |   |       |- application.scss       # Manifest file
     |   |                                 
     |   |-- layouts/                      
-    |   |   |- main.haml                  # Main layout
+    |   |   |- layout.haml                  # Main layout
     |   |                                 
-    |   |- favicon.ico                    # Sauce favicon
+    |   |- favicon.ico                    # favicon
     |   |- index.haml                     # Default page
     |                                     
+    |- .bowerrc
     |- .gitignore                         # Git ignore
     |- config.rb                          # Middleman config
     |- Gemfile                            # Dependencies
     |- Gemfile.lock                       # Last verified dependencies
     |- Rakefile                           # Rake tasks
     |- README.md                          # This README
-
+    |- bower.json                         
+    |- vendor/
+       |- assets/bower                    # vendor plugins, managed by bower
 
 ## Publishing to gh-pages
 
-Sauce includes [middleman-gh-pages](https://github.com/neo/middleman-gh-pages).
+It includes [middleman-gh-pages](https://github.com/neo/middleman-gh-pages).
 
     # Publish a build to the gh-pages branch on GitHub
     bundle exec rake publish
