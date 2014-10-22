@@ -2,12 +2,16 @@
 # config.rb
 #------------------------------------------------------------------------
 
+# assets
+activate :bower
+
 # LiveReload and pretty URLs
 activate :livereload
 activate :directory_indexes
 
 # Use relative paths
 activate :relative_assets
+
 set :relative_links, true
 
 # Default layout
@@ -29,8 +33,8 @@ set :haml, { :attr_wrapper => '"' }
 
 # Build config
 configure :build do
-  # activate :minify_css
-  # activate :minify_javascript
+  activate :minify_css
+  activate :minify_javascript
 end
 
 # Custom helpers

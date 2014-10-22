@@ -24,7 +24,7 @@
   %link{ rel: "apple-touch-icon", sizes: "114x114", href: "touch-icon-iphone-retina.png" }
   %link{ rel: "apple-touch-icon", sizes: "144x144", href: "touch-icon-ipad-retina.png" }
   
-  = javascript_include_tag "vendor/modernizr.js"
+  = javascript_include_tag :modernizr
   
   = stylesheet_link_tag "main", media: 'screen, projection'
   = stylesheet_link_tag "print", media: 'print'
@@ -35,5 +35,4 @@
   %section#content.units-row{role: "main"}= yield
   %footer#footer.units-row= partial "footer"
   
-  = javascript_include_tag "http://code.jquery.com/jquery-2.1.1.min.js"
-  = javascript_include_tag :main
+  = javascript_include_tag :application
